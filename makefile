@@ -1,8 +1,8 @@
 all: compile run
 
-compile: assembler/*.java
+compile: Implementation/*.java
 	mkdir -p bin
-	javac -d bin assembler/*.java
+	javac -d bin Implementation/*.java
 
 run: compile
 	java -cp bin assembler/Tester
