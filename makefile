@@ -5,7 +5,7 @@ compile: Implementation/*.java
 	javac -d bin Implementation/*.java
 
 run: compile
-	java -cp bin assembler/Tester
+	java -cp bin Implementation/Tester
 
 clean: 
 	rm -rf bin
