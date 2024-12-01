@@ -12,7 +12,7 @@ lineNo opcodeIndex symbolIndex locationCounter sourceLine*/
 
 class intermediateGen{
 
-    public static final Set<String> opCodes = new HashSet<>(Arrays.asList("add", "sub", "xor", "mul", "div", "mov", "inc", "dec", "jmp", "jnz"));
+    public static final Set<String> opCodes = new HashSet<>(Arrays.asList("add", "sub", "xor", "mul", "div", "mov", "inc", "dec", "jmp", "jnz","jz"));
     public static final Set<String> branchOpcodes = new HashSet<>(Arrays.asList("jz", "jmp", "jnz"));
     public static final Set<String> Datadirectives = new HashSet<>(Arrays.asList("db", "dw", "dd")); 
     public  static final Set<String> BSSdirectives = new HashSet<>(Arrays.asList("resb", "resw", "resd")); 

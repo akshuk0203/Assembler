@@ -23,13 +23,13 @@ public class modRMCal{
     private static final String[] twoOpInstructions = {"add", "sub", "xor", "mov", "cmp"};
     private static final String[] oneOpInstructions = {"mul", "div"};
 
-    public Integer calculateModRM(String instruction) {
-        String[] parts = instruction.split(" ");
+    public Integer calculateModRM(String instruction,symbolTable symboltable) {
+        String[] parts = instruction.split(" ",2);
   
         String operation = parts[0].trim();
         String[] operands = parts[1].split(",");
 
-        if (isBranchInstruction(operation) || isNoModRMInstruction(operation)) {
+        if (isBranchInstruction(operation) || isNoModRMInstruction(operation) ||isSymbol(operands,symboltable)) {
             return null;
         }
 
@@ -157,6 +157,13 @@ public class modRMCal{
 
     private static boolean isRegister(String operand) {
         return registers.containsKey(operand);
+    }
+
+    private static boolean isSymbol(String[] operands,symbolTable symboltable)
+    {
+        if(operands.length>=2 && symboltable.getSymbol(operands[1])!=null)
+            return true;
+        return false;
     }
 
 }

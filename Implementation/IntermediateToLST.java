@@ -130,7 +130,7 @@ class IntermediateToLST{
             symbolEntry symbolEntry=null;
             result=result+entry.getOpcode();
 
-            Integer modRM=modrm.calculateModRM(sourceLine);
+            Integer modRM=modrm.calculateModRM(sourceLine,symboltable);
             if(modRM != null)
                 result=result+String.format("%02X", modRM);
 
@@ -165,9 +165,14 @@ class IntermediateToLST{
                     String formattedHexValue = String.format("%0" + desiredLength + "X", Integer.parseInt(operands[1]));
 
                     result=result+ convertLittleIndian(formattedHexValue, size);
-                }else if(operands[1].contains("[")){
+                }else if(operands[1].contains("[")|| (symboltable.getSymbol(operands[1]))!=null){
                     result=result+"[";
-                    symbolEntry = symboltable.getSymbol(operands[1].substring(operands[1].indexOf("[")+1,operands[1].indexOf("]")));
+                    String str="";
+                    if(operands[1].contains("["))
+                        str=operands[1].substring(operands[1].indexOf("[")+1,operands[1].indexOf("]"));
+                    else
+                        str=operands[1];
+                    symbolEntry = symboltable.getSymbol(str);
                     result= result+convertLittleIndian(symbolEntry.getAddress(),4);
                     result= result+"]";
                 }

@@ -13,11 +13,13 @@ section .data
 	doublebyte dd 5000000
 	arr dd 10,32,44
 	msg db "AB CDE",0
+	msg1 db "Hello",10
 	doubleword dw 12345
 	doubleword1 dw 12
 	mixed db "abc123",10,0
 	
 main:
+	mov eax,a
 	mov eax,ebx
 	add dword[a],10
 	add dword[b],1000000
