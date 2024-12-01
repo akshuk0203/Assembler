@@ -1,0 +1,56 @@
+MOV,C7,2,mem32,imm32,10,false,false
+MOV,8B,2,reg32,mem32,6,false,false
+MOV,A1,2,eax,seg:offset,5,false,false
+MOV,B8,2,reg32,imm32,5,false,true
+MOV,89,2,reg32,reg32,2,true,false
+MOV,89,2,mem32,reg32,6,false,false
+MOV,A3,2,seg:offset,eax,5,true,false
+ADD,01,2,reg32,reg32,2,true,false
+ADD,01,2,mem32,reg32,6,true,false
+ADD,01,2,reg16,reg16,2,true,false
+ADD,01,2,mem16,reg16,2,true,false
+ADD,81,2,reg32,imm32,6,false,false
+ADD,81,2,mem32,imm32,10,false,false
+ADD,83,2,reg32,imm8,3,false,false
+ADD,83,2,mem32,imm8,7,false,false
+ADD,83,2,mem16,imm8,7,false,false
+ADD,83,2,reg16,imm8,7,false,false
+ADD,03,2,reg32,mem32,6,false,false
+SUB,29,2,reg32,reg32,2,true,false
+SUB,81,2,reg32,imm,6,false,false
+SUB,81,2,mem32,imm,10,false,false
+SUB,83,2,reg32,imm,3,false,false
+SUB,83,2,mem32,imm,7,false,false
+SUB,2B,2,reg32,mem32,6,true,false
+SUB,29,2,mem32,reg32,6,true,false
+SUB,2D,2,eax,imm32,5,false,false
+CMP,3D,2,eax,imm32,5,false,false
+CMP,81,2,reg32,imm32,6,false,false
+CMP,81,2,mem32,imm32,6,false,false
+CMP,83,2,reg32,imm8,3,false,false
+CMP,83,2,mem32,imm8,3,false,false
+CMP,39,2,reg32,reg32,2,true,false
+CMP,39,2,mem32,reg32,2,true,false
+CMP,3B,2,reg32,reg32,2,true,false
+CMP,3B,2,reg32,mem32,2,true,false
+XOR,35,2,eax,imm32,5,false,false
+XOR,81,2,reg32,imm32,6,false,false
+XOR,81,2,mem32,imm32,10,false,false
+XOR,83,2,reg32,imm8,3,false,false
+XOR,83,2,mem32,imm8,7,false,false
+XOR,31,2,reg32,reg32,2,true,false
+XOR,31,2,mem32,reg32,6,false,false
+XOR,33,2,reg32,mem32,6,false,false
+INC,FF,1,mem32, ,6,false,false
+INC,40,1,reg32, ,1,true,true
+DEC,FF,1,mem32, ,6,false,false
+DEC,48,1,reg32, ,1,true,true
+DIV,F7,1,reg32, ,2,true,false
+DIV,F7,1,mem32, ,6,false,false
+MUL,F7,1,reg32, ,2,true,false
+MUL,F7,1,mem32, ,6,false,false
+JNZ,75,1,mem32, ,2,false,false
+JZ,74,1,mem32, ,2,false,false
+JMP,E9,1,mem32, ,2,false,false
+JMP,FF,1,reg32, ,2,true,false
+

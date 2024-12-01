@@ -1,0 +1,12 @@
+Structure of Opcode table :
+mnemonic, opcode, size, numOperands, firstOperandType, secondOperandType, isModRM, rd
+
+Structure of Symbol table - name, val, equihex, address, size, section, defined
+
+Structure of intermediate file - LineNo LocationCounter OpcodeIndex SourceLine
+
+Supported Instrctions:
+ADD, SUB, MUL, DIV, INC, DEC, XOR, MOV, JMP, JNZ, JZ
+  				
+Registers:
+eax, ebx, ecx, edx, esi, esp, ebp, edi, ax, bx, cx, dx, al, bl, cl
