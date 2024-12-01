@@ -1,4 +1,4 @@
-package assembler;
+package Implementation;
 
 public class opcodeEntry{
     private String mnemonic;
